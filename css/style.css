@@ -1,0 +1,377 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', sans-serif;
+}
+
+body {
+    background-image: url(../images/background-web.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Navbar Utama */
+.navbar-utama {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cad5d9;
+}
+
+.navbar-utama ul {
+    list-style: none;
+}
+
+.gambar-navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-utama ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.ul-navbar{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.ul-navbar li a {
+    text-decoration: none;
+    text-align: center;
+    color: #4A4A4A;
+    font-family: 'Courier', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-utama ul li a:hover {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    text-align: center;
+    font-size: 35px;
+    cursor: pointer;
+    background-color: #627D98;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px
+}
+
+/* Main Section */
+.main-utama {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 180px;
+}
+
+/* Profile Info */
+.info {
+    max-width: 400px;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: bold;
+    color: #333333;
+    padding: 10px;
+}
+
+/* Profile Image */
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #cad5d9;
+    border-radius: 50%;
+    top: 5%;
+    left: 4%;
+    z-index: 1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* Name Section */
+.name {
+    text-align: left;
+}
+
+.name h1 {
+    color: #333333;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px;
+    width: 0;
+    animation: typing 2s steps(50) forwards, blink 0.6s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.name p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #B0C4DE;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, 0);
+}
+
+.name p:hover {
+    color: #627D98;
+}
+
+/* Footer */
+footer {
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: 10px 50px;
+}
+
+.wrapper {
+    flex: 1;
+    padding-bottom: 60px;
+}
+
+.social-icons{
+    display: flex;
+    align-items: end;
+    font-size: 25px;
+}
+
+.social-icons ul a {
+    color: #B0C4DE;
+
+}
+
+.social-icons ul a:hover{
+    color: #516A87;
+}
+
+.page-switch a{
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+/* Portofolio Section */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 135px;
+}
+
+/* Styling card */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Styling gambar dalam card */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Styling konten dalam card */
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: black;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 0.95em;
+    text-align: justify;
+}
+
+/* Contact Section */
+.contact {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top:40px;
+    margin-bottom: 32.5px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.contact h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #6886ae;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    color: #333333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 16px;
+    color: #333333;
+}
+
+input:focus, textarea:focus {
+    border-color: #CBD2D9;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(13, 110, 253, 0.3);
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    background-color: #627D98;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #516A87;
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-utama {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ul-navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .ul-navbar.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .info {
+        max-width: 90%;
+    }
+
+    .contact {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .name h1 {
+        font-size: 28px;
+    }
+}
