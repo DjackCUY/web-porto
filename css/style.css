@@ -43,13 +43,13 @@ header {
     margin: 0 15px;
 }
 
-.ul-navbar{
+.menu{
     display: flex;
     align-items: center;
     list-style: none;
 }
 
-.ul-navbar li a {
+.menu li a {
     text-decoration: none;
     text-align: center;
     color: #4A4A4A;
@@ -60,20 +60,6 @@ header {
 
 .navbar-utama ul li a:hover {
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    text-align: center;
-    font-size: 35px;
-    cursor: pointer;
-    background-color: #627D98;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 5px
 }
 
 /* Main Section */
@@ -337,23 +323,55 @@ button:hover {
         text-align: center;
     }
 
-    .ul-navbar {
+    .menu-toggle {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: white;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 10px;
+    }
+
+    .menu-label {
+        background-color: #627D98;
+        display: block;
+        width: 65px;
+        height: 65px;
         border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.3s;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
     }
 
-    .ul-navbar.active {
-        display: flex;
+    .menu-label:hover{
+        background-color: #516A87;
     }
 
-    .hamburger {
+    .menu-label span {
+        margin-top: 12px;
+        display: block;
+        margin-left: 10px;
+        margin-right: 9px;
+        height: 6px;
+        background: black;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+    }
+
+    .menu {
+        display: none;
+        background: transparent;
+        border: 1px solid #627D98;
+        padding: 10px;
+        position: absolute;
+        top: 77px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu-toggle:checked + .menu-label + .menu {
         display: block;
     }
 
